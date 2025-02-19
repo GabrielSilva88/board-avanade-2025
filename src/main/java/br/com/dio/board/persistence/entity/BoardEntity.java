@@ -25,11 +25,11 @@ public class BoardEntity {
     private List<BoardColumnEntity> boardColumn = new ArrayList<>();
 
     public BoardColumnEntity getInitialColumn(){
-        return getFilteredColumn(bc -> bc.getKid().equals(INITIAL));
+        return getFilteredColumn(bc -> bc.getKind().equals(INITIAL));
     }
 
     public BoardColumnEntity getCancelColumn(){
-        return getFilteredColumn(bc -> bc.getKid().equals(CANCEL));
+        return getFilteredColumn(bc -> bc.getKind().equals(CANCEL));
     }
 
     private BoardColumnEntity getFilteredColumn(Predicate<BoardColumnEntity> filter){
